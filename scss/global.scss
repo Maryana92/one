@@ -1,0 +1,112 @@
+$brand-gray: #232323;
+$brand-orange: #fcac45;
+$black: #000000;
+$white: #fff;
+$text-gray: 666666;
+
+@mixin icon($lenth, $bwidth, $bcolor, $iconUrl, $margin) {
+  height: $lenth;
+  width: $lenth;
+  border-width: $bwidth;
+  border-color: $bcolor;
+  border-style: solid;
+  border-radius: 50%;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: $margin;
+    background-image: url('./source/icons/#{$iconUrl}');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+body {
+  font-family: "Open Sans", Serif;
+  color: $text-gray;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.font-size-24 {
+  font-size: 24px;
+}
+
+.title-sm {
+  font-size: 34px;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 50px;
+  color: black;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+    width: 100px;
+    background-color: $brand-orange;
+  }
+}
+
+.title {
+  font-size: 44px;
+  text-transform: uppercase;
+  margin-bottom: 42px;
+  padding-top: 100px;
+  position: relative;
+  color: black;
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: calc(50% - 50px);
+    height: 3px;
+    width: 70px;
+    background-color: $brand-orange;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: calc(50% - 50px);
+    height: 3px;
+    width: 30px;
+    background-color: $brand-orange;
+  }
+
+}
+
+ul {
+  list-style-type: none;
+  list-style-image: url("./source/icons/i.png");
+  li {
+    margin-bottom: 12px;
+  }
+;
+}

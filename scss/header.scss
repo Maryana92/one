@@ -1,0 +1,33 @@
+.header {
+    position: relative;
+    height: 790px;
+    background-image: url("./source/dark_nights-wide.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &-text {
+        padding-top: 300px;
+        &-top {
+            font-size: 44px;
+        }
+        &-brand {
+            color: $brand-orange;
+        }
+        &-bot {
+            font-size: 20px;
+        }
+    }
+    &-scroll {
+        position: absolute;
+        bottom: 90px;
+        left: 0;
+        right: 0;
+
+
+        div {
+            @include icon(50px, 2px, $white, "arrow.svg", 16px);
+            cursor: pointer;
+        }
+
+    }
+}

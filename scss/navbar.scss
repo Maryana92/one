@@ -1,0 +1,29 @@
+.navbar {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    left: 0;
+    
+    .nav-item.active{
+        position: relative;
+        
+        &::before,
+        &::after{
+            content: '';
+            height: 3px;
+            width: 50%;
+            position: absolute;
+            bottom: 0;
+        }
+        
+        &::before{
+            left: 0;
+            background-color: $brand-gray;
+        }
+        &::after{
+            right: 0;
+            background-color: $brand-orange;
+        }
+    }    
+}
